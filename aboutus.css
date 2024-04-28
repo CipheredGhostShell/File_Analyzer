@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+#navbar h1:hover {
+    color: rgb(187, 191, 255);
+    transition: 0.3s; 
+}
+
+#navbar{
+    height: 60px;
+    background-color: black;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* ==========EXPERIMENTAL PART STARTS HERE========== */
+
+/* ==========EXPERIMENTAL PART ENDS HERE========== */
+
+.button:hover{
+    font-size: 20.5px;
+    transition: 0.29s;
+    color: blue;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    color: blue;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+.tagline {
+    color: rgb(62, 62, 62);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
