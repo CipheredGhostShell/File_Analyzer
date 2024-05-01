@@ -37,7 +37,7 @@
     background-color: rgb(211, 212, 255);
     border-radius: 35px;
 }
-/* Information Card CSS */
+/* Information Card CSS START*/
 .card {
     width: 190px;
     height: 254px;
@@ -71,7 +71,7 @@
     background-size: contain;
    }
    #profile-sukanta {
-    background-image: url(Images/Sagnik.jpg);
+    background-image: url(Images/Sukanta.jpg);
     background-size: contain;
    }
    #profile-subham {
@@ -142,7 +142,8 @@
    .card-avatar:hover {
     transform: scale(1.1);
    }
-/* Information Card CSS */
+/* Information Card CSS END */
+
 .button:hover{
     font-size: 20.5px;
     transition: 0.29s;
