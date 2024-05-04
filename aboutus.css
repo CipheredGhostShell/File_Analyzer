@@ -82,6 +82,10 @@
     background-image: url(Images/Ritam.jpg);
     background-size: contain;
    }
+   #profile-avinandan {
+    background-image: url(Images/Avinandan.jpg);
+    background-size: contain;
+   }
    
    /*Card footer*/
    .card-social {
