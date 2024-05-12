@@ -164,3 +164,24 @@
     padding-top: 20px;
     padding-bottom: 80px;
 }
+
+/* FOOTER PART STARTS HERE */
+
+.footer {
+    background-color: rgb(220, 220, 220);
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.disclaimer {
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(49, 49, 49)
+}
+
+/* -----FOOTER PART ENDS HERE----- */

@@ -268,12 +268,16 @@
     background-color: rgb(217, 255, 205);
 }
 
+.data {
+  margin-left: 500px;
+}
+
 /* -------MAIN SECTION ENDS HERE------ */
 
 /* FOOTER PART STARTS HERE */
 
 .footer {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(220, 220, 220);
     height: 90px;
     display: flex;
     justify-content: center;
