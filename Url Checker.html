@@ -9,6 +9,148 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+          --bg-color: #1f242d;
+          --second-bg-color: #323946;
+          --text-color: #fff;
+          --main-color: #0ef;
+        }
+        .heading{
+          margin:auto;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #0ef;
+        }
+        
+        body{
+          background-color: #323946;
+          font-family: Ubuntu Sans;
+        }
+        .container{
+        
+          margin: auto;
+          padding: 20px;
+          background-color: #1f242d;
+          width: 1150px;
+          display: grid;
+          grid-template-columns: repeat(3,350px);
+          grid-auto-rows: 50px;
+          gap: 20px;
+        }
+
+        .container>div{
+  
+          display: flex;
+          justify-content:space-around;
+          align-items: center;
+          border:  #0ef solid 1px;
+          border-radius: 50px;
+          color: #fff;
+          font-family: Ubuntu Sans;
+          font-size:medium;
+          font-weight: 500;
+          padding: 5px;
+        }
+        
+        .container>div:hover{
+          box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+          
+          text-shadow:  0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+          z-index: 99;
+          font-size: larger;
+          font-weight: bold;
+        }
+          .undetected, .harmless{
+            background-color: #004d32;
+          }
+          .malicious, .suspicious{
+            background-color: #760000;
+          }
+         .tick{
+          color:#aaff00;
+          height: 30px;
+          width: 30px;
+         }
+         .eye{
+          color: #7f858e;
+          height: 30px;
+          width: 30px;
+         }
+         .cross{
+          color: #FF3131;
+          height: 30px;
+          width: 30px;
+         }
+         .clock{
+            color: #0040ff;
+            height: 30px;
+          width: 30px;
+         }
+         .fail{
+            color: #ff0090;
+            height: 30px;
+          width: 30px;
+         }
+         #chart-container {
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            margin:20px;
+        }
+        .loader-parent{
+          display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        }
+        .loader-heading {
+          color: #fff;
+          letter-spacing: 0.2em;
+          margin-bottom: 1em;
+          font-size:15px;
+        }
+          .loader {
+          display: block;
+          --height-of-loader: 4px;
+          --loader-color: blueviolet;
+          width: 130px;
+          height: var(--height-of-loader);
+          border-radius: 30px;
+          background-color: rgba(0,0,0,0.2);
+          position: relative;
+        }
+        
+        .loader::before {
+          content: "";
+          position: absolute;
+          background: var(--loader-color);
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 100%;
+          border-radius: 30px;
+          animation: moving 1.5s ease-in-out infinite;
+          ;
+        }
+        
+        @keyframes moving {
+          50% {
+            width: 100%;
+          }
+        
+          100% {
+            width: 0;
+            right: 0;
+            left: unset;
+          }
+        }
+      </style>
 </head>
 
 <body>
@@ -17,8 +159,6 @@
             <h1>SentinelSecure <i class="fa-solid fa-shield-virus"></i></h1>
             <a href="index.html" class="HomeButton button"><i class="fa-solid fa-house"></i> Home</a>
             <a href="File Checker.html" class="FileChekButton button"><i class="fa-solid fa-file"></i> File Checker</a>
-            <a href="Hash Checker.html" class="HashCheckButton button"><i class="fa-solid fa-fingerprint"></i> Hash
-                Checker</a>
             <a href="Url Checker.html" class="UrlCheckButton button"><i class="fa-solid fa-globe"></i> Url Checker</a>
             <a href="About Us.html" class="AboutUsButton button"><i class="fa-solid fa-user-tie"></i> About Us</a>
         </div>
@@ -26,12 +166,15 @@
     <div class="hero">
         <div class="logo">SentinelSecure - URL Checker <i class="fa-solid fa-shield-virus"></i></div>
     </div>
-    <div class="tagline"><i>"Surf with Confidence, URL Checker Guards Your Cyber Pathways."</i></div>
+    <div class="tagline" style = "color:white";><i>"Surf with Confidence, URL Checker Guards Your Cyber Pathways."</i></div>
+    <form id="urlForm">
     <div class="hashinput">
         <div class="input-group">
             <input placeholder="Enter Your Url Here" type="text" id="input-field">
-            <button class="submit-button"><span>Scan</span></button>
+            <button type="submit" class="submit-button" id="url-submit"><span>Scan</span></button>
         </div>
     </div>
+</form>
+    <script src="url_checker.js"></script>
 </body>
 </html>
