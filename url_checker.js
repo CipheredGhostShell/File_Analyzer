@@ -51,7 +51,7 @@ console.log('URL Identifier:', urlIdentifier);
                 box.innerHTML=`
                 <div class="heading"><h1>HERE'S YOUR REPORT</h1></div>
                 <div id="chart-container">
-                <canvas id="myPieChart" width="200" height="200"></canvas>
+                <canvas id="myPieChart" width="500" height="500"></canvas>
             </div>
                 <div class="container" id="con">
               </div>`;
@@ -125,7 +125,7 @@ console.log('URL Identifier:', urlIdentifier);
        type: 'pie', // Set chart type to 'pie'
        data: data,
        options: {
-          responsive: true,
+          responsive: false,
           plugins: {
               legend: {
                   position: 'top',
@@ -136,7 +136,9 @@ console.log('URL Identifier:', urlIdentifier);
                tooltip: {
                    enabled: true
                }
-           }
+           },
+           aspectRatio: 1,
+        maintainAspectRatio: true,
        }
    };
    
