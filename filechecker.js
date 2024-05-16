@@ -134,7 +134,7 @@ async function mainfun(){
               box.innerHTML=`
               <div class="heading"><h1>HERE'S YOUR FILE REPORT</h1></div>
               <div id="chart-container">
-              <canvas id="myPieChart" width="200" height="200"></canvas>
+              <canvas id="myPieChart" width="455" height="455"></canvas>
           </div>
               <div class="container" id="con">
             </div>`;
@@ -208,7 +208,7 @@ const data = {
      type: 'pie', // Set chart type to 'pie'
      data: data,
      options: {
-        responsive: true,
+        responsive: false,
         plugins: {
             legend: {
                 position: 'top',
@@ -218,9 +218,29 @@ const data = {
             },
              tooltip: {
                  enabled: true
-             }
-         }
-     }
+             },
+             datalabels: {
+                formatter: (value, ctx) => {
+                if (value > 0) {
+                  let sum = 0;
+                  let dataArr = ctx.chart.data.datasets[0].data;
+                  dataArr.map(data => {
+                    sum += data;
+                  });
+                  let percentage = (value * 100 / sum).toFixed(2) + "%";
+                  return percentage;
+                } else {
+                    return null;}},
+                color: '#000000',
+                font: {
+                  size: 20,
+                }
+              }
+         },
+         aspectRatio: 1,
+        maintainAspectRatio: true,
+     },
+     plugins: [ChartDataLabels]
  };
  
  const ctx = document.getElementById('myPieChart').getContext('2d');
