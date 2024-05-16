@@ -31,7 +31,7 @@ console.log('URL Identifier:', urlIdentifier);
       let loader = document.createElement('div');
     loader.setAttribute('class','loader-parent')
     loader.setAttribute('id','loader-parent')
-    loader.innerHTML=`<p class="loader-heading">Uploding..</p>
+    loader.innerHTML=`<p class="loader-heading">Scanning...</p>
     <div class="loader"></div>`;
     document.getElementById('urlForm').replaceWith(loader);
         const options = {
