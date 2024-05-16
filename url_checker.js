@@ -49,7 +49,7 @@ console.log('URL Identifier:', urlIdentifier);
                 console.log("data get succecsfuly",response)
                 let box=document.createElement("div")
                 box.innerHTML=`
-                <div class="heading"><h1>Here's Your Report</h1></div>
+                <div class="heading"><h1>HERE'S YOUR REPORT</h1></div>
                 <div id="chart-container">
                 <canvas id="myPieChart" width="200" height="200"></canvas>
             </div>
