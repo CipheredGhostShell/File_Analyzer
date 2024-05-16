@@ -49,9 +49,9 @@ console.log('URL Identifier:', urlIdentifier);
                 console.log("data get succecsfuly",response)
                 let box=document.createElement("div")
                 box.innerHTML=`
-                <div class="heading"><h1>HERE'S YOUR REPORT</h1></div>
+                <div class="heading"><h1>HERE'S YOUR URL REPORT</h1></div>
                 <div id="chart-container">
-                <canvas id="myPieChart" width="500" height="500"></canvas>
+                <canvas id="myPieChart" width="455" height="455"></canvas>
             </div>
                 <div class="container" id="con">
               </div>`;
@@ -135,11 +135,30 @@ console.log('URL Identifier:', urlIdentifier);
               },
                tooltip: {
                    enabled: true
-               }
+               },
+               datalabels: {
+                formatter: (value, ctx) => {
+                  if (value > 0) {
+                  let sum = 0;
+                  let dataArr = ctx.chart.data.datasets[0].data;
+                  dataArr.map(data => {
+                    sum += data;
+                  });
+                  let percentage = (value * 100 / sum).toFixed(2) + "%";
+                  return percentage;} 
+                  else {
+                  return null;}
+                },
+                color: '#fff',
+                font: {
+                  size: 15,
+                }
+              }
            },
            aspectRatio: 1,
         maintainAspectRatio: true,
-       }
+       },
+       plugins: [ChartDataLabels]
    };
    
    const ctx = document.getElementById('myPieChart').getContext('2d');
