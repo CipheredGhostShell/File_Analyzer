@@ -28,7 +28,7 @@
 
 /* ==========EXPERIMENTAL PART ENDS HERE========== */
 
-.button:hover{
+.nav-button:hover{
     font-size: 20.5px;
     transition: 0.29s;
 }
@@ -40,13 +40,13 @@
 }
 
 .logo{
-    color: blue;
+    color: rgb(157, 157, 255);
     font-size: 50px;
     padding-top: 50px;
 }
 
 .tagline {
-    color: rgb(62, 62, 62);
+    color: white;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -213,6 +213,11 @@
 /* Hash Intput ENDS Here */
 /* MAIN SECTION STARTS*/
 
+main{
+  background-color: #323946;
+}
+
+
 .services{
     display: flex;
     justify-content: space-evenly;
@@ -235,7 +240,7 @@
 }
 
 .userreviewheading {
-    color: blue;
+    color: rgb(157, 157, 255);
     font-size: 50px;
     padding-top: 45px;
     padding-bottom: 70px;
@@ -248,7 +253,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(210, 210, 255);
+    background-color: #323946;
 }
 
 .reviewbox {
@@ -264,8 +269,8 @@
 }
 
 .reviewbox:hover{
-    transition: 1.5s;
-    background-color: rgb(217, 255, 205);
+    transition: 1s;
+    background-color: rgb(179, 179, 255);
 }
 
 .data {
@@ -275,15 +280,316 @@
 
 /* -------MAIN SECTION ENDS HERE------ */
 
+/* Main Section Styling For File Upload Starts Here */
+.file-div {
+  position: relative;
+  margin-left: 115px;
+  margin-bottom:70px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid rgb(1, 235, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  animation: flicker 2s linear infinite;
+}
+.file-icon{
+height:45px;
+width:45px;
+  color: rgb(1, 235, 252);
+  cursor: pointer;
+  animation: iconflicker 2s linear infinite;
+}
+@keyframes flicker {
+  0% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  5% {
+    border: none;
+    box-shadow: none;
+  }
+
+  10% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  25% {
+    border: none;
+    box-shadow: none;
+  }
+
+  30% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  100% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+}
+
+@keyframes iconflicker {
+  0% {
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 0.2;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Main Section Styling For File Upload Ends Here */
+
+/* Main Section Styling For Fingerprint Starts Here */
+.switch input {
+  display: none;
+}
+
+.button {
+  position: relative;
+  margin-left: 110px;
+  margin-bottom: 70px;
+  background-image: linear-gradient(#ffffff 33%,#414751 58%,#837b52,#c5baa1,#c3adaa);
+  border-radius: 50px;
+  padding: 6px;
+  border: none;
+  outline: none;
+  box-shadow: 0.1em 0 0 #2726267f inset, -0.1em 0 0 #27262600 inset, 0 0.1em 0 #afa490 inset, 0 -0.1em 0 #ffffff3f, 0 0.2em 0.5em #0000007f, 0 -0.1em 0 #151616 inset, -0.1em -0.2em 0 #ffffff7f inset;
+  cursor: pointer;
+  width: 7rem;
+  height: 7rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease-in-out;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: inherit;
+  background-color: #606060;
+  z-index: -1;
+  transition: background-image .3s ease-in-out;
+}
+
+.button .icon {
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+}
+
+.button .icon svg {
+  height: 100%;
+  width: 100%;
+  fill: #000000;
+  transition: fill;
+}
+
+.switch input:checked + .button::before {
+  background-image: rgb(77, 124, 255);
+  animation: anime1 .3s linear alternate-reverse infinite;
+}
+
+.switch input:checked + .button {
+  box-shadow: none;
+}
+
+.switch input:checked + .button .icon svg {
+  fill: rgb(77, 124, 255);
+  animation: anime2 .3s linear alternate-reverse infinite;
+}
+
+@keyframes anime1 {
+  to {
+    background-color: rgb(77, 124, 255);
+  }
+}
+
+@keyframes anime2 {
+  to {
+    fill: rgba(77, 124, 255, 0.642);
+  }
+}
+/* Main Section Styling For Fingerprint Ends Here */
+
+/* Main Section Styling For Radar Starts Here */
+.container {
+  width: 180px;
+  height: 150px;
+  margin-left: 70px;
+  margin-bottom: 35px;
+  background-color: #323946;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: hue-rotate(10deg);
+  color: #2fbb39;
+  gap: 20px;
+}
+.card {
+  width: 140px;
+  height: 140px;
+  background: #000000;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #18d322;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  background-color: #18d322;
+  animation: rotate 3s linear infinite;
+  z-index: 6;
+  transform-origin: 0 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: rotate(-4deg);
+  background-color: #18d322;
+  animation: rotate 3s linear infinite;
+  box-shadow: 0 0 10px 10px #2fbb39, 0 0 70px 10px #2fbb39;
+  z-index: 6;
+  transform-origin: 0 0;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #18d322;
+  border-radius: 50%;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #18d322;
+  border-radius: 50%;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #18d322;
+  border-radius: 50%;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  top: 30%;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  animation: doted 3s ease infinite;
+}
+
+.dot2 {
+  width: 4px;
+  height: 4px;
+  top: 80%;
+  right: 30%;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  animation: doted 1.5s 1.2s ease infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes doted {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px 5px red,
+      0 0 10px 10px red;
+  }
+
+  60% {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px 5px rgba(24, 211, 33, 0.3),
+      0 0 10px 10px rgba(24, 211, 33, 0.3);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(24, 211, 33, 0.7), 0 0 0 0 rgba(24, 211, 33, 0.5),
+      0 0 0 0 rgba(24, 211, 33, 0.3);
+    opacity: 0;
+  }
+}
+/* Main Section Styling For Radar Ends Here */
+
+
 /* FOOTER PART STARTS HERE */
 
 .footer {
-    background-color: rgb(220, 220, 220);
-    height: 90px;
+    background-color: #323946;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
 }
 
 .disclaimer {
@@ -291,7 +597,7 @@
     margin-right: 150px;
     font-size: 18px;
     text-align: center;
-    color: rgb(49, 49, 49)
+    color: white;
 }
 
 /* -----FOOTER PART ENDS HERE----- */
