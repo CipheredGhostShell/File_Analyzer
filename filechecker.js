@@ -195,7 +195,7 @@ const borderColors = [
 const data = {
     labels: labels,
     datasets: [{
-        label: 'My First Dataset',
+        label: '',
         data: values,
         backgroundColor: backgroundColors,
         borderColor: borderColors,
