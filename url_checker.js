@@ -149,9 +149,9 @@ console.log('URL Identifier:', urlIdentifier);
                   else {
                   return null;}
                 },
-                color: '#fff',
+                color: '#000000',
                 font: {
-                  size: 15,
+                  size: 20,
                 }
               }
            },
