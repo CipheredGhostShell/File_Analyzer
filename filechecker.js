@@ -260,3 +260,7 @@ const data = {
   document.getElementById('con').append(div)
 }
 }
+
+document.querySelector('#fileInput').addEventListener('input', () => {
+  document.querySelector('.fileSizeWarning').classList.add("hide");
+});
